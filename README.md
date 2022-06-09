@@ -11,8 +11,8 @@
 import InlineLocalization
 
 let hello = String(localizedIn: [
-	.english: "Hello",
-	.japanese: "こんにちは",
+    .english: "Hello",
+    .japanese: "こんにちは",
 ])
 ```
 
@@ -23,22 +23,22 @@ import InlineLocalization
 
 enum MyError: InlineLocalizedError
 {
-	case strange
-	
-	var localizedMessages: InlineLocalizedErrorTable
-	{
-		switch self {
-		case .strange:
-			return .init(
-				errorDescription: [
-					.japanese: "変なエラーが発生しました。",
-				],
-				recoverySuggestion: [
-					.japanese: "気を取り直してください。",
-				]
-			)
-		}
-	}
+    case strange
+    
+    var localizedMessages: InlineLocalizedErrorTable
+    {
+        switch self {
+        case .strange:
+            return .init(
+                errorDescription: [
+                    .japanese: "変なエラーが発生しました。",
+                ],
+                recoverySuggestion: [
+                    .japanese: "気を取り直してください。",
+                ]
+            )
+        }
+    }
 }
 ```
 
@@ -48,8 +48,8 @@ enum MyError: InlineLocalizedError
 import InlineLocalizationUI
 
 Text(localizedIn: [
-	.english: "Hello",
-	.japanese: "こんにちは",
+    .english: "Hello",
+    .japanese: "こんにちは",
 ])
 ```
 
@@ -57,7 +57,7 @@ Text(localizedIn: [
 ```swift
 extension Language
 {
-	static let spanish = Self(rawValue: "es")
+    static let spanish = Self(rawValue: "es")
 }
 ```
 
